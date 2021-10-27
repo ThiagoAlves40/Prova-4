@@ -1,0 +1,55 @@
+﻿@page
+@model Prova27_10.Pages.Orcamento.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Orcamento</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.Descricao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.Descricao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.ValorInicial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.ValorInicial)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.Entradas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.Entradas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.Saidas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.Saidas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.MesRef)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.MesRef)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Orcamento.ID">Editar</a> |
+    <a asp-page="./Index">Voltar</a>
+</div>

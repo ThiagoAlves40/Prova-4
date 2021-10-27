@@ -1,0 +1,66 @@
+﻿@page
+@model Prova27_10.Pages.Orcamento.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Orçamento</h1>
+
+<p>
+    <a asp-page="Create">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Orcamento[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Orcamento[0].Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Orcamento[0].ValorInicial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Orcamento[0].Entradas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Orcamento[0].Saidas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Orcamento[0].MesRef)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Orcamento) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorInicial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Entradas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Saidas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MesRef)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Detalhes</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

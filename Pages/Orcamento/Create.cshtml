@@ -1,0 +1,59 @@
+﻿@page
+@model Prova27_10.Pages.Orcamento.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Criar Novo</h1>
+
+<h4>Orçamento</h4>
+<hr />
+<div class="row">
+    <div class="col-md">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Orcamento.Nome" class="control-label"></label>
+                <input asp-for="Orcamento.Nome" class="form-control" />
+                <span asp-validation-for="Orcamento.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Orcamento.Descricao" class="control-label"></label>
+                <input asp-for="Orcamento.Descricao" class="form-control" />
+                <span asp-validation-for="Orcamento.Descricao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Orcamento.ValorInicial" class="control-label"></label>
+                <input asp-for="Orcamento.ValorInicial" class="form-control" />
+                <span asp-validation-for="Orcamento.ValorInicial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Orcamento.Entradas" class="control-label"></label>
+                <input asp-for="Orcamento.Entradas" class="form-control" />
+                <span asp-validation-for="Orcamento.Entradas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Orcamento.Saidas" class="control-label"></label>
+                <input asp-for="Orcamento.Saidas" class="form-control" />
+                <span asp-validation-for="Orcamento.Saidas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Orcamento.MesRef" class="control-label"></label>
+                <input asp-for="Orcamento.MesRef" class="form-control" />
+                <span asp-validation-for="Orcamento.MesRef" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

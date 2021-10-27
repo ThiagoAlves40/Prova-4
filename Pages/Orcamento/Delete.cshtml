@@ -1,0 +1,58 @@
+﻿@page
+@model Prova27_10.Pages.Orcamento.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar</h1>
+
+<h3>Tem certeza que quer deletar isso?</h3>
+<div>
+    <h4>Orcamento</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.Descricao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.Descricao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.ValorInicial)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.ValorInicial)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.Entradas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.Entradas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.Saidas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.Saidas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Orcamento.MesRef)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Orcamento.MesRef)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Orcamento.ID" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar</a>
+    </form>
+</div>

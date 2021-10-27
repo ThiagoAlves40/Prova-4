@@ -1,0 +1,70 @@
+﻿@page
+@model Prova27_10.Pages.Professor.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Professor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Professor.ID" />
+            <div class="form-group">
+                <label asp-for="Professor.Nome" class="control-label"></label>
+                <input asp-for="Professor.Nome" class="form-control" />
+                <span asp-validation-for="Professor.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Professor.CPF" class="control-label"></label>
+                <input asp-for="Professor.CPF" class="form-control" />
+                <span asp-validation-for="Professor.CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Professor.CTPS" class="control-label"></label>
+                <input asp-for="Professor.CTPS" class="form-control" />
+                <span asp-validation-for="Professor.CTPS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Professor.dtNascimento" class="control-label"></label>
+                <input asp-for="Professor.dtNascimento" class="form-control" />
+                <span asp-validation-for="Professor.dtNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Professor.Endereço" class="control-label"></label>
+                <input asp-for="Professor.Endereço" class="form-control" />
+                <span asp-validation-for="Professor.Endereço" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Professor.Email" class="control-label"></label>
+                <input asp-for="Professor.Email" class="form-control" />
+                <span asp-validation-for="Professor.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Professor.Senha" class="control-label"></label>
+                <input asp-for="Professor.Senha" class="form-control" />
+                <span asp-validation-for="Professor.Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Professor.Curso" class="control-label"></label>
+                <input asp-for="Professor.Curso" class="form-control" />
+                <span asp-validation-for="Professor.Curso" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

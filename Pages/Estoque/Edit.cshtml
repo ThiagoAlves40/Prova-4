@@ -1,0 +1,55 @@
+﻿@page
+@model Prova27_10.Pages.Estoque.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Estoque</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Estoque.ID" />
+            <div class="form-group">
+                <label asp-for="Estoque.Nome" class="control-label"></label>
+                <input asp-for="Estoque.Nome" class="form-control" />
+                <span asp-validation-for="Estoque.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estoque.Quantidade" class="control-label"></label>
+                <input asp-for="Estoque.Quantidade" class="form-control" />
+                <span asp-validation-for="Estoque.Quantidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estoque.Tipo" class="control-label"></label>
+                <input asp-for="Estoque.Tipo" class="form-control" />
+                <span asp-validation-for="Estoque.Tipo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estoque.DataEntrada" class="control-label"></label>
+                <input asp-for="Estoque.DataEntrada" class="form-control" />
+                <span asp-validation-for="Estoque.DataEntrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estoque.DataSaida" class="control-label"></label>
+                <input asp-for="Estoque.DataSaida" class="form-control" />
+                <span asp-validation-for="Estoque.DataSaida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
